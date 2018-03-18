@@ -1,6 +1,10 @@
-# data-science-intro
+# data-science-intro notebook
 
+This is a docker container running jupyter notebook and connects to a local persistent folder
 To start notebook as a docker container - use this :
 
-$ docker run -it -p "127.0.0.1:8081:8080" -v "${HOME}:/content" gcr.io/cloud-datalab/datalab:local-20170224
+# clone the repository into a new folder
+~/ git clone git@github.com:chenchuk77/data-science-intro.git
 
+# run a docker container pointing to the cloned repo
+~/ docker run -d -p 8888:8888 -v $(pwd):/home/ds/notebooks dataquestio/python3-starter
